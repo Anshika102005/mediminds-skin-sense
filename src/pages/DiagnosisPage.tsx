@@ -9,16 +9,35 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import UploadImage from "@/components/UploadImage";
 import SymptomForm from "@/components/SymptomForm";
+import PatientInfoForm from "@/components/PatientInfoForm";
 import type { PredictionResult } from "@/components/ResultCard";
+
+interface PatientInfo {
+  name: string;
+  age: string;
+  gender: string;
+}
 
 const DiagnosisPage = () => {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState("patientInfo");
+  const [patientInfo, setPatientInfo] = useState<PatientInfo>({
+    name: "",
+    age: "",
+    gender: ""
+  });
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [symptoms, setSymptoms] = useState<{ selected: string[], description: string }>({
     selected: [],
     description: ""
   });
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+
+  const handlePatientInfoSubmit = (info: PatientInfo) => {
+    setPatientInfo(info);
+    setActiveTab("upload");
+    toast.success("Patient information saved!");
+  };
 
   const handleImageSelected = (file: File) => {
     setSelectedImage(file);
@@ -39,6 +58,12 @@ const DiagnosisPage = () => {
       return;
     }
 
+    if (!patientInfo.name || !patientInfo.age || !patientInfo.gender) {
+      toast.error("Please complete patient information to continue.");
+      setActiveTab("patientInfo");
+      return;
+    }
+
     setIsAnalyzing(true);
     
     // Simulate AI analysis (in a real app, this would call an API)
@@ -52,8 +77,9 @@ const DiagnosisPage = () => {
         risk: Math.random() > 0.7 ? "high" : Math.random() > 0.4 ? "medium" : "low"
       };
       
-      // Store result in session storage for results page
+      // Store result and patient info in session storage for results page
       sessionStorage.setItem("diagnosis-result", JSON.stringify(mockResult));
+      sessionStorage.setItem("patient-info", JSON.stringify(patientInfo));
       
       // Navigate to results page
       navigate("/results");
@@ -68,11 +94,19 @@ const DiagnosisPage = () => {
         <h1 className="text-3xl font-bold text-center mb-8">Skin Analysis</h1>
         
         <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="upload" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger value="upload">Upload Image</TabsTrigger>
-              <TabsTrigger value="symptoms">Describe Symptoms</TabsTrigger>
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
+              <TabsTrigger value="patientInfo">Patient Information</TabsTrigger>
+              <TabsTrigger value="upload" disabled={!patientInfo.name}>Upload Image</TabsTrigger>
+              <TabsTrigger value="symptoms" disabled={!selectedImage}>Describe Symptoms</TabsTrigger>
             </TabsList>
+            
+            <TabsContent value="patientInfo" className="mt-0">
+              <PatientInfoForm 
+                onPatientInfoSubmit={handlePatientInfoSubmit} 
+                initialValues={patientInfo}
+              />
+            </TabsContent>
             
             <TabsContent value="upload" className="mt-0">
               <UploadImage onImageSelected={handleImageSelected} />
@@ -82,7 +116,8 @@ const DiagnosisPage = () => {
                   Please upload a clear, well-lit image of the affected area
                 </p>
                 <Button 
-                  onClick={() => document.querySelector('[data-value="symptoms"]')?.click()}
+                  onClick={() => setActiveTab("symptoms")}
+                  disabled={!selectedImage}
                   className="bg-mediminds-blue hover:bg-mediminds-darkblue"
                 >
                   Continue to Symptoms
@@ -100,6 +135,13 @@ const DiagnosisPage = () => {
                   <h3 className="font-semibold text-lg mb-4">Your Submission Summary</h3>
                   
                   <div className="space-y-4">
+                    <div>
+                      <p className="font-medium">Patient:</p>
+                      <p className="text-gray-600">
+                        {patientInfo.name}, {patientInfo.age} years old, {patientInfo.gender}
+                      </p>
+                    </div>
+                    
                     <div>
                       <p className="font-medium">Image:</p>
                       <p className="text-gray-600">
