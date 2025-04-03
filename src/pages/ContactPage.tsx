@@ -31,33 +31,33 @@ const ContactPage = () => {
                 <div className="mb-6">
                   <h3 className="text-lg font-medium mb-2">Address</h3>
                   <p className="text-gray-600">
-                    123 Healthcare Avenue<br />
-                    Medical District<br />
-                    New York, NY 10001
+                    Kalinga University<br />
+                    Academic Block<br />
+                    Raipur, Chhattisgarh 492101
                   </p>
                 </div>
                 
                 <div className="mb-6">
                   <h3 className="text-lg font-medium mb-2">Email</h3>
                   <p className="text-gray-600">
-                    contact@mediminds.com<br />
-                    support@mediminds.com
+                    contact@kalingauniversity.ac.in<br />
+                    support@kalingauniversity.ac.in
                   </p>
                 </div>
                 
                 <div className="mb-6">
                   <h3 className="text-lg font-medium mb-2">Phone</h3>
                   <p className="text-gray-600">
-                    +1 (555) 123-4567<br />
-                    +1 (555) 765-4321
+                    +91 (771) 123-4567<br />
+                    +91 (771) 765-4321
                   </p>
                 </div>
                 
                 <div>
                   <h3 className="text-lg font-medium mb-2">Hours</h3>
                   <p className="text-gray-600">
-                    Monday to Friday: 9am - 6pm<br />
-                    Saturday: 10am - 4pm<br />
+                    Monday to Friday: 9am - 5pm<br />
+                    Saturday: 10am - 2pm<br />
                     Sunday: Closed
                   </p>
                 </div>
