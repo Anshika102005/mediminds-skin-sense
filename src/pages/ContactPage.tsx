@@ -2,60 +2,61 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import "../styles/ContactPage.css";
 
 const ContactPage = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="contact-page">
       <Header />
       
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold mb-2">Contact Us</h1>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+      <main className="contact-main">
+        <div className="contact-container">
+          <div className="contact-header">
+            <h1 className="contact-title">Contact Us</h1>
+            <p className="contact-description">
               Have questions about our skin cancer detection service? Want to provide feedback?
               Reach out to our team and we'll get back to you as soon as possible.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
+          <div className="contact-grid">
+            <div className="contact-form-section">
+              <h2 className="section-title">Send Us a Message</h2>
               <ContactForm />
             </div>
             
-            <div>
-              <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+            <div className="contact-info-section">
+              <h2 className="section-title">Contact Information</h2>
               
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="mb-6">
-                  <h3 className="text-lg font-medium mb-2">Address</h3>
-                  <p className="text-gray-600">
+              <div className="contact-info-card">
+                <div className="info-block">
+                  <h3 className="info-title">Address</h3>
+                  <p className="info-text">
                     Kalinga University<br />
                     Academic Block<br />
                     Raipur, Chhattisgarh 492101
                   </p>
                 </div>
                 
-                <div className="mb-6">
-                  <h3 className="text-lg font-medium mb-2">Email</h3>
-                  <p className="text-gray-600">
+                <div className="info-block">
+                  <h3 className="info-title">Email</h3>
+                  <p className="info-text">
                     contact@kalingauniversity.ac.in<br />
                     support@kalingauniversity.ac.in
                   </p>
                 </div>
                 
-                <div className="mb-6">
-                  <h3 className="text-lg font-medium mb-2">Phone</h3>
-                  <p className="text-gray-600">
+                <div className="info-block">
+                  <h3 className="info-title">Phone</h3>
+                  <p className="info-text">
                     +91 (771) 123-4567<br />
                     +91 (771) 765-4321
                   </p>
                 </div>
                 
-                <div>
-                  <h3 className="text-lg font-medium mb-2">Hours</h3>
-                  <p className="text-gray-600">
+                <div className="info-block">
+                  <h3 className="info-title">Hours</h3>
+                  <p className="info-text">
                     Monday to Friday: 9am - 5pm<br />
                     Saturday: 10am - 2pm<br />
                     Sunday: Closed
@@ -63,29 +64,29 @@ const ContactPage = () => {
                 </div>
               </div>
               
-              <div className="mt-8 bg-mediminds-lightgray p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-medium mb-4">Frequently Asked Questions</h3>
+              <div className="faq-section">
+                <h3 className="faq-title">Frequently Asked Questions</h3>
                 
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-medium">How accurate is the AI diagnosis?</h4>
-                    <p className="text-gray-600 text-sm">
+                <div className="faq-list">
+                  <div className="faq-item">
+                    <h4 className="faq-question">How accurate is the AI diagnosis?</h4>
+                    <p className="faq-answer">
                       Our AI system has been trained on thousands of clinical images and has a high accuracy rate. 
                       However, it is designed to be a screening tool and not a replacement for professional medical diagnosis.
                     </p>
                   </div>
                   
-                  <div>
-                    <h4 className="font-medium">Is my data secure?</h4>
-                    <p className="text-gray-600 text-sm">
+                  <div className="faq-item">
+                    <h4 className="faq-question">Is my data secure?</h4>
+                    <p className="faq-answer">
                       Yes, we take data privacy very seriously. All images and personal information are encrypted 
                       and handled in compliance with healthcare data protection standards.
                     </p>
                   </div>
                   
-                  <div>
-                    <h4 className="font-medium">How can I book an appointment with a specialist?</h4>
-                    <p className="text-gray-600 text-sm">
+                  <div className="faq-item">
+                    <h4 className="faq-question">How can I book an appointment with a specialist?</h4>
+                    <p className="faq-answer">
                       After receiving your results, you can use the "Book Appointment" feature to 
                       schedule a consultation with a dermatologist in our partner network.
                     </p>
