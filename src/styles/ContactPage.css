@@ -80,35 +80,3 @@
 .info-text {
   color: #6b7280;
 }
-
-.faq-section {
-  background-color: #f1f0fb;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.faq-title {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.faq-item {
-  margin-bottom: 1rem;
-}
-
-.faq-question {
-  font-weight: 500;
-}
-
-.faq-answer {
-  color: #6b7280;
-  font-size: 0.875rem;
-}
