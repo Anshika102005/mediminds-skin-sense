@@ -27,25 +27,12 @@
   margin-bottom: 0.5rem;
 }
 
-.contact-description {
-  color: #6b7280;
-  max-width: 48rem;
-  margin: 0 auto;
-}
-
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
 }
 
-@media (min-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.contact-form-section, .contact-info-section {
+.contact-info-section {
   margin-bottom: 1.5rem;
 }
 
