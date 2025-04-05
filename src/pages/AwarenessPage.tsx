@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MLTechniquesExplanation from "@/components/MLTechniquesExplanation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -45,7 +44,7 @@ const AwarenessPage = () => {
                   <div className="border rounded-lg overflow-hidden shadow-sm">
                     <div className="h-48 bg-gray-200 flex items-center justify-center">
                       <img 
-                        src="/lovable-uploads/779b7c04-7d48-4295-9a41-364527074c92.png" 
+                        src="/lovable-uploads/cae281f1-7687-4a32-9e0e-384ab9974255.png" 
                         alt="Basal Cell Carcinoma" 
                         className="w-full h-full object-cover"
                       />
@@ -59,7 +58,7 @@ const AwarenessPage = () => {
                   <div className="border rounded-lg overflow-hidden shadow-sm">
                     <div className="h-48 bg-gray-200 flex items-center justify-center">
                       <img 
-                        src="/lovable-uploads/779b7c04-7d48-4295-9a41-364527074c92.png" 
+                        src="/lovable-uploads/62347964-efa6-4a44-a14e-080bb2c16223.png" 
                         alt="Squamous Cell Carcinoma" 
                         className="w-full h-full object-cover"
                       />
@@ -73,7 +72,7 @@ const AwarenessPage = () => {
                   <div className="border rounded-lg overflow-hidden shadow-sm">
                     <div className="h-48 bg-gray-200 flex items-center justify-center">
                       <img 
-                        src="/lovable-uploads/779b7c04-7d48-4295-9a41-364527074c92.png" 
+                        src="/lovable-uploads/dd8906da-ec64-4032-a38c-0ef409411df5.png" 
                         alt="Melanoma" 
                         className="w-full h-full object-cover"
                       />
@@ -190,10 +189,6 @@ const AwarenessPage = () => {
             </Card>
           </TabsContent>
         </Tabs>
-        
-        <div className="mt-12">
-          <MLTechniquesExplanation />
-        </div>
       </main>
       
       <Footer />
