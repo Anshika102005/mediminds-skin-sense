@@ -52,12 +52,18 @@ const BookingForm = ({
   });
 
   const handleSubmit = (data: z.infer<typeof bookingFormSchema>) => {
-    onSubmit({
+    // Ensure all required fields from BookingFormData are included
+    const bookingData: BookingFormData = {
       dermatologistId: dermatologist.id,
       date: appointmentDate,
       timeSlot: appointmentTime,
-      ...data
-    });
+      patientName: data.patientName,
+      patientEmail: data.patientEmail,
+      patientPhone: data.patientPhone,
+      reason: data.reason
+    };
+    
+    onSubmit(bookingData);
   };
 
   const formattedDate = (() => {
