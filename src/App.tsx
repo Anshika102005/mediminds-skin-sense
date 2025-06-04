@@ -10,8 +10,8 @@ import DiagnosisPage from "./pages/DiagnosisPage";
 import ResultsPage from "./pages/ResultsPage";
 import AwarenessPage from "./pages/AwarenessPage";
 import ContactPage from "./pages/ContactPage";
+import BookAppointmentPage from "./pages/BookAppointmentPage";
 import NotFound from "./pages/NotFound";
-import FindDermatologistPage from "./pages/FindDermatologistPage";
 
 const queryClient = new QueryClient();
 
@@ -27,7 +27,7 @@ const App = () => (
           <Route path="/results" element={<ResultsPage />} />
           <Route path="/awareness" element={<AwarenessPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/find-dermatologist" element={<FindDermatologistPage />} />
+          <Route path="/book-appointment" element={<BookAppointmentPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
