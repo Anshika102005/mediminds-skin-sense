@@ -1,7 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 export type PredictionResult = {
   prediction: "Normal" | "Benign" | "Malignant";
@@ -60,11 +59,6 @@ const ResultCard = ({ result }: ResultCardProps) => {
         </div>
         
         <div className="flex flex-col space-y-3">
-          <Button asChild className="bg-mediminds-darkblue hover:bg-mediminds-blue">
-            <Link to="/book-appointment">
-              Book Appointment
-            </Link>
-          </Button>
           <Button variant="outline">
             Save Result
           </Button>
