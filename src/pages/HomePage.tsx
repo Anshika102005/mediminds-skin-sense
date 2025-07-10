@@ -44,7 +44,7 @@ const HomePage = () => {
         <section className="py-16 bg-gray-50 dark:bg-gray-900">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* AI Detection */}
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-3">AI Skin Analysis</h3>
@@ -64,10 +64,22 @@ const HomePage = () => {
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Learn about different types of skin cancer, prevention methods,
-                  and treatment options.
+                  and treatment options through our comprehensive guides.
                 </p>
                 <Button asChild variant="outline">
                   <Link to="/awareness">Learn More</Link>
+                </Button>
+              </div>
+
+              {/* Prevention & Treatment */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-3">Prevention & Treatment</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Discover effective prevention strategies and learn about various
+                  treatment options available for different types of skin cancer.
+                </p>
+                <Button asChild variant="outline">
+                  <Link to="/awareness">View Resources</Link>
                 </Button>
               </div>
             </div>
