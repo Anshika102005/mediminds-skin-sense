@@ -64,8 +64,8 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         mediminds: {
-          blue: "#3498db",
-          darkblue: "#2073b3",
+          blue: "#3FA9F5",
+          darkblue: "#2D8ED1",
           red: "#e74c3c",
           green: "#2ecc71",
           lightgray: "#f9f9f9",

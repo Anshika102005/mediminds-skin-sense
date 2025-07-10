@@ -11,7 +11,7 @@ const HomePage = () => {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 md:py-24">
+        <section className="bg-gradient-to-r from-mediminds-blue to-mediminds-darkblue text-white py-12 md:py-24">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Early Detection Saves Lives
@@ -23,7 +23,7 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
                 asChild
-                className="bg-white text-blue-700 hover:bg-gray-100 text-lg px-6 py-3 h-auto"
+                className="bg-white text-mediminds-blue hover:bg-gray-100 text-lg px-6 py-3 h-auto"
                 size="lg"
               >
                 <Link to="/diagnosis">Try Skin Check</Link>
@@ -44,7 +44,7 @@ const HomePage = () => {
         <section className="py-16 bg-gray-50 dark:bg-gray-900">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* AI Detection */}
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-3">AI Skin Analysis</h3>
@@ -54,17 +54,6 @@ const HomePage = () => {
                 </p>
                 <Button asChild variant="outline">
                   <Link to="/diagnosis">Start Analysis</Link>
-                </Button>
-              </div>
-
-              {/* Find a Doctor */}
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-3">Find a Dermatologist</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Connect with qualified dermatologists near you and book appointments online.
-                </p>
-                <Button asChild variant="outline">
-                  <Link to="/find-dermatologist">Find & Book</Link>
                 </Button>
               </div>
 
