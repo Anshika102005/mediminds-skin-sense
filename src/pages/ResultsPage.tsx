@@ -58,13 +58,9 @@ const ResultsPage = () => {
             <div className="mt-8 text-center">
               <Button 
                 onClick={() => navigate("/diagnosis")}
-                variant="outline" 
-                className="mr-4"
+                variant="outline"
               >
                 Start New Analysis
-              </Button>
-              <Button onClick={() => window.print()}>
-                Print Results
               </Button>
             </div>
           </div>
