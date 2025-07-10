@@ -6,29 +6,84 @@ const PreventionTabContent = () => {
   return (
     <Card>
       <CardContent className="pt-6">
-        <h2 className="text-2xl font-bold text-mediminds-blue mb-4">Prevention</h2>
+        <h2 className="text-2xl font-bold text-mediminds-blue mb-4">Prevention & Treatment</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Sun Protection</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Apply broad-spectrum sunscreen with SPF 30+ daily</li>
-              <li>Seek shade, especially between 10 a.m. and 4 p.m.</li>
-              <li>Wear protective clothing (long sleeves, wide-brimmed hats)</li>
-              <li>Use UV-blocking sunglasses</li>
-              <li>Avoid tanning beds and sunlamps</li>
-            </ul>
-          </div>
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold mb-4 text-mediminds-blue">Prevention Strategies</h3>
           
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Regular Screening</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Perform monthly self-examinations of your skin</li>
-              <li>Visit a dermatologist annually for professional skin checks</li>
-              <li>Know your risk factors (family history, fair skin, etc.)</li>
-              <li>Document changes in existing moles or spots</li>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h4 className="text-lg font-semibold mb-3 text-mediminds-darkblue">Sun Protection Essentials</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Apply broad-spectrum sunscreen with SPF 30+ daily, even on cloudy days</li>
+                <li>Reapply sunscreen every 2 hours or after swimming/sweating</li>
+                <li>Seek shade between 10 a.m. and 4 p.m. when UV rays are strongest</li>
+                <li>Wear protective clothing: long sleeves, wide-brimmed hats (4+ inches)</li>
+                <li>Use UV-blocking sunglasses that block 99-100% of UV rays</li>
+                <li>Avoid tanning beds and sunlamps completely</li>
+                <li>Be extra careful around water, snow, and sand that reflect UV rays</li>
+              </ul>
+            </div>
+            
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h4 className="text-lg font-semibold mb-3 text-green-700">Regular Screening & Self-Care</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Perform monthly self-examinations of your entire body</li>
+                <li>Visit a dermatologist annually for professional skin checks</li>
+                <li>Know your personal risk factors (family history, fair skin, many moles)</li>
+                <li>Document and photograph suspicious moles or changes</li>
+                <li>Check often-missed areas: scalp, between toes, under nails</li>
+                <li>Use the ABCDE rule to evaluate moles regularly</li>
+                <li>Report any concerning changes to a healthcare provider immediately</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+            <h4 className="font-semibold text-yellow-800 mb-2">High-Risk Groups Should Take Extra Precautions:</h4>
+            <ul className="text-yellow-800 list-disc pl-6 space-y-1">
+              <li>People with fair skin, light hair, and light eyes</li>
+              <li>Those with a family history of skin cancer</li>
+              <li>Individuals with many moles or atypical moles</li>
+              <li>People with a history of severe sunburns</li>
+              <li>Those with weakened immune systems</li>
             </ul>
           </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-4 text-mediminds-blue">Treatment Options</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Surgical Treatments</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Excisional surgery:</strong> Complete removal of cancerous tissue with surrounding healthy tissue</li>
+                <li><strong>Mohs surgery:</strong> Layer-by-layer removal with immediate microscopic examination</li>
+                <li><strong>Curettage and electrodesiccation:</strong> Scraping and burning of cancer cells</li>
+                <li><strong>Cryosurgery:</strong> Freezing cancer cells with liquid nitrogen</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Advanced Treatments</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Radiation therapy:</strong> High-energy beams to destroy cancer cells</li>
+                <li><strong>Immunotherapy:</strong> Boosting the immune system to fight cancer</li>
+                <li><strong>Targeted therapy:</strong> Drugs that target specific cancer cell features</li>
+                <li><strong>Photodynamic therapy:</strong> Light-activated drugs to destroy cancer cells</li>
+                <li><strong>Topical treatments:</strong> Creams for certain early-stage skin cancers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-400">
+          <p className="text-red-800">
+            <strong>Remember:</strong> Early detection dramatically improves treatment outcomes. When caught early, 
+            the 5-year survival rate for melanoma is over 99%. Our AI-powered detection tool can help identify 
+            potential issues, but always consult with a dermatologist for proper diagnosis and treatment planning.
+          </p>
         </div>
       </CardContent>
     </Card>
