@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# MediMinds – Skin Sense 🧠🩺
 
-## Project info
+Welcome to **MediMinds – Skin Sense**, an AI-powered web application that helps in the early detection of **skin cancer** based on symptoms and image analysis.
 
-**URL**: https://lovable.dev/projects/fa36933e-a3a2-4645-9b7b-56ea01967382
+Our goal is to **increase awareness**, **enable early detection**, and assist individuals in making informed decisions about their skin health using artificial intelligence.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🔬 Project Objective
 
-**Use Lovable**
+Skin cancer often goes undiagnosed in its early stages due to lack of awareness. MediMinds aims to:
+- Analyze skin-related symptoms or images.
+- Predict the likelihood of skin cancer.
+- Educate users with causes, prevention tips, and treatment options.
+- Bridge the gap between technology and healthcare accessibility.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fa36933e-a3a2-4645-9b7b-56ea01967382) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 💡 Key Features
 
-**Use your preferred IDE**
+- 📷 **Image Upload & Prediction**  
+  Upload a skin lesion image and get prediction results using AI.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 💬 **Symptom-Based Diagnosis**  
+  Enter symptoms and receive possible diagnosis and suggestions.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- 📚 **Disease Information Panel**  
+  Get detailed info on types, causes, prevention, and care.
 
-Follow these steps:
+- 🧠 **ML/AI-Powered Backend**  
+  Trained model for accurate and fast predictions.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧰 Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: Python, Flask  
+- **Machine Learning**: TensorFlow / Keras, OpenCV  
+- **Database**: SQLite (for storing user queries and results)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 📊 Dataset Used
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+We used publicly available skin cancer image datasets such as the **ISIC Dataset** for model training and testing.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Getting Started
 
-## What technologies are used for this project?
+### Prerequisites
+- Python 3.x
+- pip (Python package manager)
 
-This project is built with:
+### Installation Steps
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+git clone https://github.com/your-username/mediminds-skin-sense.git
+cd mediminds-skin-sense
+pip install -r requirements.txt
+python app.py
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/fa36933e-a3a2-4645-9b7b-56ea01967382) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
