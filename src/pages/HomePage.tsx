@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -30,8 +29,8 @@ const HomePage = () => {
               </Button>
               <Button
                 asChild
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 text-lg px-6 py-3 h-auto"
+                className="bg-white hover:bg-gray-100 text-lg px-6 py-3 h-auto"
+                style={{ color: '#3FA9F5' }}
                 size="lg"
               >
                 <Link to="/awareness">Learn About Skin Cancer</Link>
