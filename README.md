@@ -34,10 +34,10 @@ Skin cancer often goes undiagnosed in its early stages due to lack of awareness.
 
 ## 🧰 Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Python, Flask  
-- **Machine Learning**: TensorFlow / Keras, OpenCV  
-- **Database**: SQLite (for storing user queries and results)
+- **Frontend**: HTML, CSS 
+- **Backend**: Javascript, Typescript
+- **Machine Learning**: TensorFlow / Keras, OpenCV 
+- 
 
 ---
 
