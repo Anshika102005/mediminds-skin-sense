@@ -1,0 +1,89 @@
+{
+  "environment": {
+    "tensorflow": "2.20.0",
+    "keras": "3.14.1",
+    "python": "3.13.15",
+    "gpus": [
+      "/physical_device:GPU:0"
+    ],
+    "cpu_devices": [
+      "/physical_device:CPU:0"
+    ],
+    "backbone": "EfficientNetB0",
+    "image_size": [
+      224,
+      224
+    ],
+    "batch_size": 32,
+    "mixed_precision_policy": "float32"
+  },
+  "arguments": {
+    "stage": "both",
+    "epochs_stage1": 2,
+    "epochs_stage2": 1,
+    "lr_stage1": 0.001,
+    "lr_stage2": 2e-05,
+    "batch_size": 32,
+    "loss": "weighted_ce",
+    "fine_tune_from": "block6",
+    "verbose": 2,
+    "smoke": true,
+    "fresh_log": false
+  },
+  "class_names": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "model": {
+    "backbone": "EfficientNetB0",
+    "parameters": {
+      "trainable": 3138851,
+      "non_trainable": 919687,
+      "total": 4058538,
+      "trainable_pct": 77.33945080716258
+    },
+    "gradcam_layer": "top_activation"
+  },
+  "stage1_best_val_accuracy": 0.20000000298023224,
+  "stage2_best_val_accuracy": 0.2571428716182709,
+  "best_model": {
+    "path": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/best_model.keras",
+    "validation_metrics": {
+      "accuracy": 0.2571428716182709,
+      "loss": 1.8663400411605835,
+      "top3_accuracy": 0.6285714507102966
+    }
+  },
+  "stage_seconds": {
+    "stage1": 59.277523040771484,
+    "stage2": 39.94653129577637
+  },
+  "seconds_per_epoch": {
+    "stage1": [
+      57.3,
+      1.7
+    ],
+    "stage2": [
+      39.7
+    ]
+  },
+  "artifacts": {
+    "dir": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke",
+    "stage1": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/stage1_head.keras",
+    "stage2": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/stage2_finetuned.keras",
+    "best": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/best_model.keras",
+    "history": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/training_history.json",
+    "log_csv": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/training_log.csv",
+    "run_info": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/run_info.json",
+    "overfit": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/overfitting_report.json",
+    "curves": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/training_curves.png",
+    "label_map": "/mnt/d/Projects/mediminds-skin-sense/ml/artifacts/smoke/label_map.json"
+  },
+  "test_set_note": "The test split was deliberately not touched during training; run python -m ml.src.evaluate on the frozen model.",
+  "disclaimer": "AI-assisted screening only. This model is a research/educational tool that flags potentially concerning skin lesions. It does NOT diagnose cancer, is not a medical device, and must never replace assessment by a qualified dermatologist or other licensed clinician."
+}

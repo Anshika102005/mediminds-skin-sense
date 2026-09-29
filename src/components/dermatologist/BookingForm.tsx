@@ -80,7 +80,7 @@ const BookingForm = ({
         <CardTitle>Complete Your Booking</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="mb-6 p-4 bg-slate-50 dark:bg-slate-900 rounded-md">
+        <div className="mb-6 p-4 bg-[#F7FAF9] dark:bg-[#0F766E] rounded-md">
           <p className="font-medium">Appointment Details</p>
           <p className="text-sm text-muted-foreground">With {dermatologist.name}</p>
           <p className="text-sm text-muted-foreground">{formattedDate} at {appointmentTime}</p>

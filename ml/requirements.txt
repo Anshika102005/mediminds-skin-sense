@@ -1,0 +1,12 @@
+tensorflow>=2.15
+numpy
+pandas
+scikit-learn
+pillow
+matplotlib
+seaborn
+opencv-python
+scipy
+
+# Verbatim environment of the validated runs (TF 2.20 / Keras 3.14 / Py 3.13):
+# tensorflow==2.20.0, keras==3.14.1 — see ml/artifacts/smoke/run_info.json.

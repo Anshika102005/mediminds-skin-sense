@@ -1,0 +1,58 @@
+{
+  "index_to_class": {
+    "0": "akiec",
+    "1": "bcc",
+    "2": "bkl",
+    "3": "df",
+    "4": "mel",
+    "5": "nv",
+    "6": "vasc"
+  },
+  "class_to_index": {
+    "akiec": 0,
+    "bcc": 1,
+    "bkl": 2,
+    "df": 3,
+    "mel": 4,
+    "nv": 5,
+    "vasc": 6
+  },
+  "num_classes": 7,
+  "class_descriptions": {
+    "akiec": "Actinic Keratosis / Bowen's disease-like (IEC)",
+    "bcc": "Basal Cell Carcinoma",
+    "bkl": "Benign Keratosis (nevus-like / seborrheic keratosis)",
+    "df": "Dermatofibroma",
+    "mel": "Melanoma",
+    "nv": "Nevus (common mole)",
+    "vasc": "Vascular Lesion (angioma, pyogenic granuloma)"
+  },
+  "high_recall_classes": [
+    "mel",
+    "bcc"
+  ],
+  "backbone": "EfficientNetB0",
+  "image_size": [
+    224,
+    224
+  ],
+  "input_range": [
+    0.0,
+    255.0
+  ],
+  "disclaimer": "AI-assisted screening only. This model is a research/educational tool that flags potentially concerning skin lesions. It does NOT diagnose cancer, is not a medical device, and must never replace assessment by a qualified dermatologist or other licensed clinician.",
+  "stage1_best_val_accuracy": 0.20000000298023224,
+  "stage2_best_val_accuracy": 0.2571428716182709,
+  "validation_metrics": {
+    "accuracy": 0.2571428716182709,
+    "loss": 1.8663400411605835,
+    "top3_accuracy": 0.6285714507102966
+  },
+  "training": {
+    "loss": "weighted_ce",
+    "batch_size": 32,
+    "stage1_epochs": 2,
+    "stage2_epochs": 1,
+    "fine_tune_from": "block6"
+  }
+}

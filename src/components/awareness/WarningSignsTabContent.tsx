@@ -6,7 +6,7 @@ const WarningSignsTabContent = () => {
   return (
     <Card>
       <CardContent className="pt-6">
-        <h2 className="text-2xl font-bold text-mediminds-blue mb-4">Warning Signs</h2>
+        <h2 className="text-2xl font-bold text-[#0F766E] mb-4">Warning Signs</h2>
         
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-2">The ABCDE Rule of Melanoma</h3>

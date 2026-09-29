@@ -85,7 +85,7 @@ const ContactForm = () => {
       
       <Button 
         type="submit" 
-        className="w-full bg-mediminds-blue hover:bg-mediminds-darkblue"
+        className="w-full bg-[#0F766E] hover:bg-[#0F766E]"
       >
         Send Message
       </Button>

@@ -6,7 +6,7 @@ const TypesTabContent = () => {
   return (
     <Card>
       <CardContent className="pt-6">
-        <h2 className="text-2xl font-bold text-mediminds-blue mb-4">Types of Skin Cancer</h2>
+        <h2 className="text-2xl font-bold text-[#0F766E] mb-4">Types of Skin Cancer</h2>
         <p className="mb-6">
           Skin cancer is the abnormal growth of skin cells, most often developing on skin exposed to 
           the sun. There are several types of skin cancer, each named after the type of skin cell from 

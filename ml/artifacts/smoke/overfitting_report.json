@@ -1,0 +1,53 @@
+{
+  "stage1": {
+    "gap_threshold": 0.12,
+    "patience": 3,
+    "epochs_recorded": 2,
+    "max_accuracy_gap": 0.10476,
+    "final_accuracy_gap": 0.10476,
+    "best_val_accuracy": 0.2,
+    "best_val_epoch": 2,
+    "warnings": [],
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "train_accuracy": 0.19048,
+        "val_accuracy": 0.14286,
+        "accuracy_gap": 0.04762,
+        "train_loss": 1.99244,
+        "val_loss": 1.98051,
+        "learning_rate": 0.0010000000474974513
+      },
+      {
+        "epoch": 2,
+        "train_accuracy": 0.30476,
+        "val_accuracy": 0.2,
+        "accuracy_gap": 0.10476,
+        "train_loss": 1.76971,
+        "val_loss": 1.88894,
+        "learning_rate": 0.0010000000474974513
+      }
+    ]
+  },
+  "stage2": {
+    "gap_threshold": 0.12,
+    "patience": 3,
+    "epochs_recorded": 1,
+    "max_accuracy_gap": 0.13333,
+    "final_accuracy_gap": 0.13333,
+    "best_val_accuracy": 0.25714,
+    "best_val_epoch": 1,
+    "warnings": [],
+    "per_epoch": [
+      {
+        "epoch": 1,
+        "train_accuracy": 0.39048,
+        "val_accuracy": 0.25714,
+        "accuracy_gap": 0.13333,
+        "train_loss": 1.75686,
+        "val_loss": 1.86634,
+        "learning_rate": 1.9999999494757503e-05
+      }
+    ]
+  }
+}

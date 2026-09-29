@@ -51,7 +51,7 @@ const ConfirmationView = ({ bookingData, dermatologist }: ConfirmationViewProps)
             </div>
           </div>
           
-          <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-md mt-4">
+          <div className="bg-[#F7FAF9] dark:bg-[#0F766E] p-4 rounded-md mt-4">
             <p className="text-sm font-medium">Booking Details</p>
             <p className="text-sm">Name: {bookingData.patientName}</p>
             <p className="text-sm">Email: {bookingData.patientEmail}</p>

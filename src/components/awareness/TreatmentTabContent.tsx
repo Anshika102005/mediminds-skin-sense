@@ -6,7 +6,7 @@ const TreatmentTabContent = () => {
   return (
     <Card>
       <CardContent className="pt-6">
-        <h2 className="text-2xl font-bold text-mediminds-blue mb-4">Treatment</h2>
+        <h2 className="text-2xl font-bold text-[#0F766E] mb-4">Treatment</h2>
         
         <p className="mb-4">Treatment options depend on the type, size, location, and stage of skin cancer. Common approaches include:</p>
         

@@ -20,7 +20,7 @@ const CancerInfoCard = ({ title, description, imageSrc }: CancerInfoCardProps) =
         </div>
       )}
       <CardHeader className="pt-6 pb-2">
-        <CardTitle className="text-xl font-semibold text-mediminds-darkblue">
+        <CardTitle className="text-xl font-semibold text-[#0F766E]">
           {title}
         </CardTitle>
       </CardHeader>

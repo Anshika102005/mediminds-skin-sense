@@ -6,12 +6,12 @@ const PreventionTabContent = () => {
   return (
     <Card>
       <CardContent className="pt-6">
-        <h2 className="text-2xl font-bold text-mediminds-blue mb-4">Prevention Strategies</h2>
+        <h2 className="text-2xl font-bold text-[#0F766E] mb-4">Prevention Strategies</h2>
         
         <div className="mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="text-lg font-semibold mb-3 text-mediminds-darkblue">Sun Protection Essentials</h4>
+            <div className="bg-[#EEF7F5] p-4 rounded-lg">
+              <h4 className="text-lg font-semibold mb-3 text-[#0F766E]">Sun Protection Essentials</h4>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Apply broad-spectrum sunscreen with SPF 30+ daily, even on cloudy days</li>
                 <li>Reapply sunscreen every 2 hours or after swimming/sweating</li>

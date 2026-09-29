@@ -66,7 +66,7 @@ const BookAppointmentPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               <Card>
-                <CardHeader className="bg-mediminds-blue text-white">
+                <CardHeader className="bg-[#0F766E] text-white">
                   <CardTitle>Schedule Your Visit</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6">
@@ -145,7 +145,7 @@ const BookAppointmentPage = () => {
                     
                     <Button 
                       type="submit" 
-                      className="w-full bg-mediminds-blue hover:bg-mediminds-darkblue"
+                      className="w-full bg-[#0F766E] hover:bg-[#0F766E]"
                     >
                       Confirm Appointment
                     </Button>
@@ -156,7 +156,7 @@ const BookAppointmentPage = () => {
             
             <div>
               <Card>
-                <CardHeader className="bg-mediminds-darkblue text-white">
+                <CardHeader className="bg-[#0F766E] text-white">
                   <CardTitle>Appointment Information</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6">
@@ -185,8 +185,8 @@ const BookAppointmentPage = () => {
                       </p>
                     </div>
                     
-                    <div className="bg-mediminds-blue/10 p-3 rounded">
-                      <h3 className="font-medium text-mediminds-darkblue">Insurance</h3>
+                    <div className="bg-[#0F766E]/10 p-3 rounded">
+                      <h3 className="font-medium text-[#0F766E]">Insurance</h3>
                       <p className="text-sm text-gray-600 mt-1">
                         We accept most major insurance plans. Please bring your insurance card to your appointment.
                       </p>

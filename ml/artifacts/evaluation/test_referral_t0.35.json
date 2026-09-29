@@ -1,0 +1,79 @@
+{
+  "threshold_source": "validation only (val_threshold_sweep.json); NOT re-tuned on test",
+  "referral_threshold": 0.35,
+  "rule": "if p(mel)+p(bcc)+p(akiec) >= t predict argmax within {mel,bcc,akiec}, else argmax overall",
+  "argmax_screening": {
+    "definition": "malignant = ['mel', 'bcc', 'akiec'] (grouped); benign = all other classes",
+    "n_malignant": 266,
+    "n_benign": 1187,
+    "true_positive": 161,
+    "false_negative": 105,
+    "true_negative": 1063,
+    "false_positive": 124,
+    "sensitivity_recall": 0.6052631578947368,
+    "specificity": 0.8955349620893007,
+    "missed_malignant_rate": 0.39473684210526316
+  },
+  "referral_screening": {
+    "definition": "malignant = ['mel', 'bcc', 'akiec'] (grouped); benign = all other classes",
+    "n_malignant": 266,
+    "n_benign": 1187,
+    "true_positive": 200,
+    "false_negative": 66,
+    "true_negative": 977,
+    "false_positive": 210,
+    "sensitivity_recall": 0.7518796992481203,
+    "specificity": 0.823083403538332,
+    "missed_malignant_rate": 0.24812030075187969
+  },
+  "delta_sensitivity": 0.14661654135338342,
+  "delta_specificity": -0.07245155855096874,
+  "per_class_argmax": {
+    "mel": {
+      "precision": 0.47619047619047616,
+      "recall": 0.5128205128205128,
+      "f1-score": 0.49382716049382713,
+      "support": 156
+    },
+    "bcc": {
+      "precision": 0.5294117647058824,
+      "recall": 0.6818181818181818,
+      "f1-score": 0.5960264900662252,
+      "support": 66
+    },
+    "akiec": {
+      "precision": 0.46875,
+      "recall": 0.3409090909090909,
+      "f1-score": 0.39473684210526316,
+      "support": 44
+    }
+  },
+  "per_class_referral": {
+    "mel": {
+      "precision": 0.3900414937759336,
+      "recall": 0.6025641025641025,
+      "f1-score": 0.473551637279597,
+      "support": 156
+    },
+    "bcc": {
+      "precision": 0.4152542372881356,
+      "recall": 0.7424242424242424,
+      "f1-score": 0.532608695652174,
+      "support": 66
+    },
+    "akiec": {
+      "precision": 0.37254901960784315,
+      "recall": 0.4318181818181818,
+      "f1-score": 0.4,
+      "support": 44
+    }
+  },
+  "accuracy_argmax": 0.7426015141087405,
+  "accuracy_referral": 0.7185134205092911,
+  "balanced_accuracy_argmax": 0.6418051427912993,
+  "balanced_accuracy_referral": 0.632184816811263,
+  "split": "test",
+  "model": "D:\\Projects\\mediminds-skin-sense\\ml\\artifacts\\best_model.keras",
+  "tta": true,
+  "disclaimer": "AI-assisted screening only. This model is a research/educational tool that flags potentially concerning skin lesions. It does NOT diagnose cancer, is not a medical device, and must never replace assessment by a qualified dermatologist or other licensed clinician."
+}

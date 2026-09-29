@@ -1,0 +1,9 @@
+{
+  "threads": 1,
+  "batch": 16,
+  "physical_cpus": 12,
+  "frozen_s_per_step": 0.651,
+  "frozen_s_per_image": 0.0407,
+  "finetune_s_per_step": 0.974,
+  "finetune_s_per_image": 0.0608
+}

@@ -6,7 +6,7 @@ const MLTechniquesExplanation = () => {
   return (
     <Card className="max-w-4xl mx-auto my-8 bg-gray-50">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-mediminds-darkblue">
+        <CardTitle className="text-2xl font-bold text-[#0F766E]">
           Skin Cancer Detection Using Machine Learning
         </CardTitle>
       </CardHeader>
