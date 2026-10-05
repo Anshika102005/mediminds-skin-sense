@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MediMinds Skin Sense — System Architecture",
+    "output": ".archify/architecture-mediminds-skin-sense-20261004-201056/mediminds-skin-sense.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/Anshika102005/mediminds-skin-sense.git",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "53ca5fdc195d78143ad8f2877a1e44d3d8f40be5"
+    }
+  },
+  "components": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "Patient / Professional",
+      "sublabel": "Web browser",
+      "icon": "person",
+      "pos": [40, 356],
+      "size": [150, 62]
+    },
+    {
+      "id": "spa",
+      "type": "frontend",
+      "label": "React SPA",
+      "sublabel": "Vite + TypeScript",
+      "tag": "React Router",
+      "icon": "frontend",
+      "pos": [300, 350],
+      "size": [180, 74],
+      "sources": [
+        { "path": "src/App.tsx", "line": 25, "label": "SPA routes" },
+        { "path": "src/lib/api.ts", "line": 5, "label": "API base URL" },
+        { "path": "src/pages/DiagnosisPage.tsx", "line": 123, "label": "upload + predict" }
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI API",
+      "sublabel": "REST :8000",
+      "tag": "Pydantic contracts",
+      "icon": "backend",
+      "pos": [620, 342],
+      "size": [210, 88],
+      "sources": [
+        { "path": "backend/app/main.py", "line": 18, "label": "FastAPI app" },
+        { "path": "backend/app/routers/screening.py", "line": 13, "label": "predict endpoint" }
+      ]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "SQLite",
+      "sublabel": "backend/data/mediminds.db",
+      "tag": "8 tables",
+      "icon": "database",
+      "pos": [620, 156],
+      "size": [210, 68],
+      "sources": [
+        { "path": "backend/app/database.py", "line": 11, "label": "SQLite path" },
+        { "path": "backend/app/database.py", "line": 18, "label": "schema init" }
+      ]
+    },
+    {
+      "id": "model",
+      "type": "backend",
+      "label": "EfficientNetB0 CNN",
+      "sublabel": "frozen best_model.keras",
+      "tag": "7-class softmax",
+      "icon": "backend",
+      "pos": [620, 620],
+      "size": [210, 86],
+      "sources": [
+        { "path": "backend/app/inference.py", "line": 24, "label": "warm-loaded model" },
+        { "path": "ml/src/model.py", "line": 466, "label": "load frozen .keras" },
+        { "path": "ml/src/config.py", "line": 135, "label": "artifact path" }
+      ]
+    },
+    {
+      "id": "gradcam",
+      "type": "backend",
+      "label": "Grad-CAM",
+      "sublabel": "JET heatmap @45%",
+      "tag": "Explainable AI",
+      "icon": "backend",
+      "pos": [1030, 624],
+      "size": [200, 78],
+      "sources": [
+        { "path": "backend/app/gradcam.py", "line": 15, "label": "Grad-CAM compute" },
+        { "path": "backend/app/gradcam.py", "line": 44, "label": "explanation text" }
+      ]
+    },
+    {
+      "id": "trainpipe",
+      "type": "backend",
+      "label": "ML Training Pipeline",
+      "sublabel": "ml/src (offline)",
+      "tag": "transfer learning",
+      "icon": "backend",
+      "pos": [150, 624],
+      "size": [220, 78],
+      "sources": [
+        { "path": "ml/src/train.py", "line": 409, "label": "training entrypoint" },
+        { "path": "ml/src/config.py", "line": 31, "label": "EfficientNetB0 backbone" }
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "FastAPI process — model warm-loaded in-process",
+      "wraps": ["api", "model", "gradcam"],
+      "pad": 34
+    }
+  ],
+  "connections": [
+    { "id": "user-to-spa", "from": "user", "to": "spa", "label": "Open app" },
+    { "id": "spa-to-api", "from": "spa", "to": "api", "label": "REST /api/*", "variant": "emphasis" },
+    { "id": "api-to-db", "from": "api", "to": "db", "label": "SQL (SQLite)", "fromSide": "top", "toSide": "bottom" },
+    { "id": "api-to-model", "from": "api", "to": "model", "label": "predict (TTA ×4)", "fromSide": "bottom", "toSide": "top" },
+    { "id": "model-to-gradcam", "from": "model", "to": "gradcam", "label": "activations + gradients", "fromSide": "right", "toSide": "left" },
+    { "id": "train-to-model", "from": "trainpipe", "to": "model", "label": "exports best_model.keras", "variant": "dashed", "fromSide": "right", "toSide": "left" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Frontend",
+      "items": [
+        "React 18 + TypeScript, built with Vite (SPA routes in src/App.tsx)",
+        "Patient and professional dashboards, English/Hindi i18n",
+        "Calls the backend over REST using VITE_API_BASE"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Backend APIs",
+      "items": [
+        "/api/screening/predict — image to probabilities, referral and Grad-CAM",
+        "/api/auth/*, /api/patients/*, /api/professionals/* for records and reviews",
+        "Image-quality gate rejects blurry or dark uploads with HTTP 422"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "ML inference",
+      "items": [
+        "EfficientNetB0 transfer learning, 7-class softmax over HAM10000 classes",
+        "Flip test-time augmentation averaged over 4 views",
+        "Frozen referral threshold 0.35, selected on validation data only"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Persistence",
+      "items": [
+        "SQLite at backend/data/mediminds.db",
+        "8 tables: users, professionals, organizations, patients, screenings, reviews, treatments, appointments",
+        "Grad-CAM heatmap, overlay and uploaded image stored as base64 blobs"
+      ]
+    }
+  ]
+}

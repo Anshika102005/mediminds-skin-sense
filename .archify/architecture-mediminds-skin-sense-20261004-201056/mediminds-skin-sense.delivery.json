@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "452ae5dc-309a-46e3-8d39-e04e1b795562",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "D:\\Projects\\mediminds-skin-sense\\.archify\\architecture-mediminds-skin-sense-20261004-201056\\candidate.json",
+  "output": "D:\\Projects\\mediminds-skin-sense\\.archify\\architecture-mediminds-skin-sense-20261004-201056\\mediminds-skin-sense.html",
+  "specification": {
+    "sha256": "be283c30973f4eae56a96b5ebd986c0e5638d080a16cbb4f3c0ad1ea6e19f390",
+    "bytes": 5698
+  },
+  "artifact": {
+    "sha256": "f1aa6b53f5115b6ac8b485847da1721addf171b952687023bf843aa4d2717037",
+    "bytes": 761514
+  }
+}
